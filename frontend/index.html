@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyStore — Premium Apple products, online.</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="navbar-slot"></div>
+
+  <main>
+    <section class="hero">
+      <h1>iPhone 15 Pro</h1>
+      <h2>Titanium. So strong. So light. So Pro.</h2>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="products.html?category=iphone">Shop iPhone</a>
+        <a class="btn btn-outline" href="products.html">Browse the Store</a>
+      </div>
+      <img class="hero-image"
+           src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-naturaltitanium?wid=2560&hei=1440&fmt=p-jpg&qlt=80&.v=1693342290295"
+           alt="iPhone 15 Pro" />
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Featured</h2>
+      <p class="section-subtitle">Hand-picked products our customers love.</p>
+      <div class="container">
+        <div class="product-grid" id="featured-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--bg-alt);">
+      <h2 class="section-title">Shop by category</h2>
+      <p class="section-subtitle">Explore the latest from across the lineup.</p>
+      <div class="container">
+        <div class="product-grid" id="category-tiles"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/local-cart.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/home.js"></script>
+</body>
+</html>

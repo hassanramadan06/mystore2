@@ -1,0 +1,8 @@
+# Real config never goes into git — only the example template.
+config.php
+
+# OS / editor noise
+.DS_Store
+*.log
+.vscode/
+.idea/

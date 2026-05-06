@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout — MyStore</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="navbar-slot"></div>
+  <main class="container" style="padding-top: 2rem;">
+    <h1 style="font-size: 2rem; font-weight: 600; letter-spacing: -0.02em;">Checkout</h1>
+
+    <div id="checkout-content" class="checkout-grid">
+      <form id="checkout-form" class="form-card" style="margin: 0; max-width: none;">
+        <h2 style="margin-top: 0;">Shipping details</h2>
+        <p class="form-error" id="form-error"></p>
+
+        <div class="form-row">
+          <label for="shippingAddress">Address</label>
+          <input id="shippingAddress" required maxlength="300" placeholder="123 Apple Park Way" />
+        </div>
+        <div class="form-row">
+          <label for="city">City</label>
+          <input id="city" required maxlength="60" placeholder="Cupertino" />
+        </div>
+        <div class="form-row">
+          <label for="postalCode">Postal code</label>
+          <input id="postalCode" required maxlength="20" placeholder="95014" />
+        </div>
+        <div class="form-row">
+          <label for="country">Country</label>
+          <input id="country" required maxlength="60" placeholder="United States" />
+        </div>
+
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 1rem 0;">
+          Payment is in test mode (Stripe stub). No real charge will be made.
+        </p>
+
+        <button class="btn btn-primary btn-block" id="place-order" type="submit">Place order</button>
+      </form>
+
+      <aside class="checkout-summary" id="summary"></aside>
+    </div>
+  </main>
+  <div id="footer-slot"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/local-cart.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/checkout.js"></script>
+</body>
+</html>

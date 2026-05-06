@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create account — MyStore</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="navbar-slot"></div>
+  <main class="container">
+    <form id="register-form" class="auth-card" autocomplete="on">
+      <h1>Create your account</h1>
+      <p class="form-error" id="form-error"></p>
+      <div class="form-row">
+        <label for="fullName">Full name</label>
+        <input id="fullName" required maxlength="100" placeholder="Jane Doe" />
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" type="email" required placeholder="you@example.com" />
+      </div>
+      <div class="form-row">
+        <label for="password">Password</label>
+        <input id="password" type="password" required minlength="6" placeholder="At least 6 characters" />
+      </div>
+      <button class="btn btn-primary btn-block" type="submit">Create account</button>
+      <p style="text-align:center; margin-top: 1rem; font-size: 0.9rem;">
+        Already have an account? <a href="login.html">Sign in</a>
+      </p>
+    </form>
+  </main>
+  <div id="footer-slot"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/local-cart.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/register.js"></script>
+</body>
+</html>

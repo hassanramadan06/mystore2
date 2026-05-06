@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Store — MyStore</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="navbar-slot"></div>
+
+  <main class="container" style="padding-top: 2rem;">
+    <h1 id="products-heading" style="font-size: 2rem; font-weight: 600; letter-spacing: -0.02em;">All Products</h1>
+
+    <form id="filters-form" class="filters" autocomplete="off">
+      <div class="filter-field">
+        <label for="f-search">Search</label>
+        <input id="f-search" type="search" placeholder="Search products…" />
+      </div>
+      <div class="filter-field">
+        <label for="f-category">Category</label>
+        <select id="f-category"><option value="">All categories</option></select>
+      </div>
+      <div class="filter-field">
+        <label for="f-min">Min price</label>
+        <input id="f-min" type="number" min="0" placeholder="$ 0" />
+      </div>
+      <div class="filter-field">
+        <label for="f-max">Max price</label>
+        <input id="f-max" type="number" min="0" placeholder="$ 5000" />
+      </div>
+      <div class="filter-field">
+        <label for="f-sort">Sort</label>
+        <select id="f-sort">
+          <option value="">Featured</option>
+          <option value="price_asc">Price: Low → High</option>
+          <option value="price_desc">Price: High → Low</option>
+          <option value="name">Name: A → Z</option>
+          <option value="newest">Newest</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" type="submit" style="grid-column: 1 / -1;">Apply</button>
+    </form>
+
+    <div class="product-grid" id="products-grid"></div>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/local-cart.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/products.js"></script>
+</body>
+</html>
